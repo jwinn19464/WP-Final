@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="set_price.css">
+    <title>Set Sell Price</title>
+</head>
+
+<body>
+    <header>
+        <h1>Selling Dashboard</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Enter Property Price Information</h2>
+
+        <form id="property-form">
+            <label for="propertyType">Property Type:</label>
+            <select id="propertyType" name="propertyType" required>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+                <option value="townhome">Townhome</option>
+            </select>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" placeholder="Enter price" required>
+            <span id="price-range" class="bold"></span>
+
+            <button type="submit" onclick="window.location.href='createNew_stage3.html'"">Submit</button>
+        </form>
+
+
+    </div>
+
+</body>
+<script>
+    document.getElementById('price').addEventListener('input', function() {
+        const priceInput = parseFloat(this.value);
+        const priceRangeElement = document.getElementById('price-range');
+        
+        if (!isNaN(priceInput)) {
+            const minPrice = priceInput;
+            const maxPrice = minPrice * 1.2; // 20% increase
+            
+            priceRangeElement.textContent = `(Price Range: $${minPrice.toFixed(2)} - $${maxPrice.toFixed(2)})`;
+            priceRangeElement.classList.add('bold'); // Adding bold class
+        } else {
+            priceRangeElement.textContent = '';
+            priceRangeElement.classList.remove('bold'); // Removing bold class if no value is entered
+        }
+    });    
+    
+</script>
+</html>

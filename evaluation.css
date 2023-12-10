@@ -1,0 +1,83 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('img/luxhouse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #016b1f;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    padding: 3px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0f010c;
+}
+
+input,
+button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #016b1f;
+    color: #fff;
+}
+
+.info-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.material-icons {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #016b1f;
+}
+
+.next-button {
+    background-color: #016b1f;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Align to the right */
+}
+
+.next-button:hover {
+    background-color: #614caf;
+}
