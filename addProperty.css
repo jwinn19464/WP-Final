@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9ddbbf;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+  
+  header {
+    background-color: #016b1f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .form-container {
+    width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  body {
+    background-image: url('img/luxhouse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0f010c;
+  }
+
+  .show-photo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .show-photo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  
+  input,
+  button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #016b1f;
+    color: #fff;
+  }
+  
