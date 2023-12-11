@@ -13,7 +13,7 @@
     <header>
         <h1>Seller Dashboard</h1>
     </header>
-    <h2 style="text-align: center;">Your Evaluation is Booked</h2>
+    <h2 style="text-align: center;">Book Your Evaluation</h2>
     <div class="form-container">
         <h3>Schedule Evaluation</h3>
 
@@ -39,11 +39,28 @@
                 <span class="material-icons">pets</span>
                 <p>If you have pets, please secure them in a kennel or carrier.</p>
             </div>
-            <button class="next-button" onclick="window.location.href='confirmation.html'">Next</button>
+            <button class="next-button" onclick="window.location.href='conclusion.php'">Next</button>
         </div>
     </div>
-
-
 </body>
-
+<script>
+    document.getElementById('schedule-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission to see the confirmation message
+    
+        const scheduleDate = document.getElementById('scheduleDate').value;
+        if (scheduleDate !== '') {
+            const confirmation = confirm(`Are you sure you want to schedule for ${scheduleDate}?`);
+            if (confirmation) {
+                // Proceed with scheduling logic or submit the form
+                // For example: document.getElementById('schedule-form').submit();
+                alert('Scheduled successfully!'); // Replace this with your actual scheduling logic
+            } else {
+                alert('Scheduling canceled.');
+            }
+        } else {
+            alert('Please select a date.');
+        }
+    });
+    
+</script>
 </html>
