@@ -15,7 +15,9 @@ header {
     font-size: small;
     padding: 3px;
 }
-
+h2 {
+    text-align: center;
+}
 .form-container {
     max-width: 800px;
     margin: 20px auto;
